@@ -15,6 +15,19 @@ body {
 #top {
   padding-left: 33%; }
 
+#menuhamburguesa {
+  display: none; }
+
+header label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 5px; }
+
+header label:hover {
+  cursor: pointer;
+  /*background-color: rgba(150,150,150,0.3);*/ }
+
 .personal .personal-contenido {
   display: flex;
   flex-wrap: wrap;
@@ -57,6 +70,7 @@ span {
   float: right; }
 
 #header-menu a, li {
+  display: block;
   padding: 15px 10px;
   font-weight: 500;
   font-size: 16px;
@@ -71,6 +85,9 @@ span {
 
 #header-menu a:active {
   color: #45a29e; }
+
+.contenedor-header ul {
+  display: flex; }
 
 /* FIN NAV BAR */
 /* INICIO INTRO */
@@ -104,83 +121,6 @@ span {
   margin-top: 10px; }
 
 /* FIN INTRO */
-/* INICIO PERSONAL */
-.ancho {
-  max-width: 1300px;
-  padding: 0 80px;
-  margin: auto; }
-
-.personal {
-  padding: 100px 0;
-  background-color: #0b0c10; }
-
-.personal .titulo {
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 60px;
-  padding-bottom: 10px;
-  color: #F5F5F5; }
-
-.personal .titulo::before {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 4px;
-  background-color: #45a29e;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%); }
-
-.personal .personal-contenido .columnaizq {
-  width: 35%; }
-
-.personal .personal-contenido .columnader {
-  width: 65%; }
-
-.personal .personal-contenido .columnader .textder {
-  font-size: 28px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  line-height: 30px;
-  color: #F5F5F5; }
-
-.personal .personal-contenido .columnader .textder span {
-  font-weight: 500;
-  color: #45a29e; }
-
-.personal .personal-contenido .columnader p {
-  text-align: justify;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 30px;
-  color: #F5F5F5; }
-
-.personal .personal-contenido .columnader a {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #1f2833;
-  color: #F5F5F5;
-  font-size: 16px;
-  padding: 10px 30px;
-  margin-top: 10px;
-  border-radius: 6px;
-  border: 1px solid #1f2833;
-  transition: all 0.3s ease; }
-
-.personal .personal-contenido .columnader a:hover {
-  color: #1f2833;
-  background-color: #45a29e;
-  border: 1px solid #45a29e; }
-
-.personal .personal-contenido .columnaizq img {
-  height: 350px;
-  width: 350px;
-  object-fit: cover;
-  border-radius: 10px; }
-
-/* FIN PERSONAL */
 /* INICIO SECCIÓN PORTFOLIO */
 .contenedor-portfolio {
   overflow: hidden; }
@@ -244,6 +184,83 @@ span {
   padding: 0 0 20px 20px; }
 
 /* FIN SECCIÓN PORTFOLIO */
+/* INICIO PERSONAL */
+.personal {
+  padding: 100px 0;
+  background-color: #0b0c10; }
+
+.ancho {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto; }
+
+.personal .titulo {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  color: #F5F5F5; }
+
+.personal .titulo::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 4px;
+  background-color: #45a29e;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.personal .personal-contenido .columnaizq {
+  width: 35%; }
+
+.personal .personal-contenido .columnaizq img {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 10px; }
+
+.personal .personal-contenido .columnader {
+  width: 65%; }
+
+.personal .personal-contenido .columnader .textder {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 30px;
+  color: #F5F5F5; }
+
+.personal .personal-contenido .columnader .textder span {
+  font-weight: 500;
+  color: #45a29e; }
+
+.personal .personal-contenido .columnader p {
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #F5F5F5; }
+
+.personal .personal-contenido .columnader a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1f2833;
+  color: #F5F5F5;
+  font-size: 16px;
+  padding: 10px 30px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #1f2833;
+  transition: all 0.3s ease; }
+
+.personal .personal-contenido .columnader a:hover {
+  color: #1f2833;
+  background-color: #45a29e;
+  border: 1px solid #45a29e; }
+
+/* FIN PERSONAL */
 /* INICIO FORMULARIO */
 .contacto {
   padding: 100px 0;
@@ -388,14 +405,14 @@ span {
     margin-top: 50px;
     border-radius: 4px;
     color: $blanco;
-  }
-  
-  .form-register h4 {
+}
+
+.form-register h4 {
     font-size: 18px;
     margin-bottom: 20px;
-  }
-  
-  .controls {
+}
+
+.controls {
     width: 100%;
     background: $secundario;
     padding: 10px;
@@ -405,26 +422,26 @@ span {
     font-family: 'calibri';
     font-size: 14px;
     color: $blanco;
-  }
-  
-  .form-register p {
+}
+
+.form-register p {
     height: 40px;
     text-align: center;
     font-size: 14px;
     line-height: 40px;
-  }
-  
-  .form-register a {
+}
+
+.form-register a {
     color: $blanco;
     text-decoration: none;
-  }
-  
-  .form-register a:hover {
+}
+
+.form-register a:hover {
     color: $blanco;
     text-decoration: underline;
-  }
-  
-  .form-register .botons {
+}
+
+.form-register .botons {
     width: 100%;
     background-color: $terciario;
     border: none;
@@ -432,7 +449,7 @@ span {
     color: $secundario;
     margin: 16px 0;
     font-size: 12px;
-  }*/
+}*/
 /* FIN FORMULARIO */
 /* INICIO FOOTER */
 footer {
@@ -450,8 +467,468 @@ footer span a {
   text-decoration: none; }
 
 footer span a:hover {
+  color: #c5c6c7;
   text-decoration: underline; }
 
 /* FIN FOOTER */
 /* INICIO BOOTSTRAP */
 /* FIN BOOTSTRAP*/
+@media screen and (max-width: 1024px) {
+  /* INICIO NAV BAR */
+  .contenedor-header {
+    max-width: 924px; }
+  #header-menu .logo {
+    font-size: 30px; }
+  #header-menu a, li {
+    padding: 15px 7.5px;
+    font-size: 15px; }
+  /* FIN NAV BAR */
+  /* INICIO INTRO */
+  .introd {
+    background-image: url("/img/profile1024.png");
+    background-repeat: no-repeat;
+    height: 560px;
+    min-height: 400px; }
+  .introd .widthmax {
+    margin: 150px 0 auto 65px; }
+  .introd .introd-contenido .introd-text1 {
+    font-size: 18px; }
+  .introd .introd-contenido .introd-text2 {
+    font-size: 36px;
+    margin-top: 5px; }
+  .introd .introd-contenido .introd-text3 {
+    font-size: 25px;
+    margin-top: 5px; }
+  /* FIN INTRO */
+  /* INICIO SECCIÓN PORTFOLIO */
+  #portfolio {
+    padding: 50px 0;
+    width: 100%; }
+  .portfolio-center .titulo {
+    font-size: 36px;
+    margin-bottom: 45px;
+    padding-bottom: 10px; }
+  .portfolio-center .titulo::before {
+    width: 150px;
+    height: 3.5px; }
+  .portfolio-img {
+    padding: 0px;
+    height: auto; }
+  /* FIN SECCIÓN PORTFOLIO */
+  /* INICIO SECCIÓN PROYECTO */
+  .proyecto {
+    width: 100%; }
+  .proyecto img {
+    width: 100%; }
+  /* FIN SECCIÓN PROYECTO */
+  /* INICIO PERSONAL */
+  .personal {
+    padding: 50px 0; }
+  .ancho {
+    max-width: 900px;
+    padding: 0 0px; }
+  .personal .titulo {
+    font-size: 36px;
+    margin-bottom: 45px;
+    padding-bottom: 10px; }
+  .personal .titulo::before {
+    width: 150px;
+    height: 3.5px; }
+  .personal .personal-contenido .columnaizq img {
+    height: 275px;
+    width: 275px;
+    border-radius: 10px; }
+  .personal .personal-contenido .columnader .textder {
+    font-size: 25px;
+    margin-bottom: 12.5px;
+    line-height: 25px; }
+  .personal .personal-contenido .columnader p {
+    font-size: 14px;
+    line-height: 25px; }
+  .personal .personal-contenido .columnader a {
+    font-size: 14px;
+    padding: 5px 15px;
+    margin-top: 5px;
+    border-radius: 4.5px; }
+  /* FIN PERSONAL */
+  /* INICIO FORMULARIO */
+  .contacto {
+    padding: 50px 0; }
+  .contacto .titulo {
+    font-size: 36px;
+    margin-bottom: 45px;
+    padding-bottom: 10px; }
+  .contacto .titulo::before {
+    width: 150px;
+    height: 3.5px; }
+  .contacto .contacto-contenido .columnaizq {
+    width: 100%; }
+  .contacto .contacto-contenido .columnader {
+    width: 100%;
+    margin-top: 20px; }
+  .contacto .contacto-contenido .textizq,
+  .contacto .contacto-contenido .textder {
+    font-size: 25px;
+    margin-bottom: 5px; }
+  .contacto .contacto-contenido .columnaizq p {
+    font-size: 14px; }
+  .contacto .contacto-contenido .columnaizq .icons {
+    margin: 2.5px 0;
+    font-size: 14px; }
+  .contacto .contacto-contenido .fila {
+    float: left;
+    height: 55px;
+    width: 25%; }
+  .contacto .contacto-contenido .fila i {
+    font-size: 14px; }
+  .contacto .contacto-contenido .fila .info .head {
+    line-height: 18px; }
+  .contacto .contacto-contenido .fila .info .subtitulo {
+    line-height: 18px; }
+  .contacto .columnader form .field,
+  .contacto .columnader form .fields .field {
+    height: 40px;
+    margin-bottom: 10px; }
+  .contacto .columnader form .name {
+    margin-right: 5px; }
+  .contacto .columnader form .email {
+    margin-left: 5px; }
+  .contacto .columnader form .field input {
+    border-radius: 7.5px;
+    padding: 0 10px;
+    font-size: 12px; }
+  .contacto .columnader form textarea {
+    border-radius: 7.5px;
+    padding: 0 10px;
+    font-size: 12px;
+    padding-top: 10px; }
+  .contacto .columnader form .textarea {
+    font-size: 12px; }
+  .contacto .columnader form .enviar {
+    height: 35px;
+    width: 130px;
+    margin-top: 50px;
+    /* FIN FORMULARIO */
+    /* INICIO FOOTER */
+    /* FIN FOOTER */ }
+    .contacto .columnader form .enviar .contacto .columnader form .enviar button {
+      font-size: 12px;
+      padding: 5px 15px;
+      margin-top: 2.5px;
+      border-radius: 4px; }
+    .contacto .columnader form .enviar footer {
+      padding: 15px 18px; } }
+
+@media screen and (max-width: 1024px) and (max-width: 768px) {
+  /* INICIO NAV BAR */
+  .contenedor-header {
+    max-width: 618px; }
+  #header-menu .logo {
+    font-size: 28px; }
+  #header-menu a, li {
+    padding: 15px 7.5px;
+    font-size: 14px; }
+  /* FIN NAV BAR */
+  /* INICIO INTRO */
+  .introd {
+    background-image: url("/img/profile768.png");
+    background-repeat: no-repeat;
+    height: 400px;
+    min-height: 300px; }
+  .introd .widthmax {
+    margin: 75px 0 auto 65px; }
+  .introd .introd-contenido .introd-text1 {
+    font-size: 16px; }
+  .introd .introd-contenido .introd-text2 {
+    font-size: 32px;
+    margin-top: 3.5px; }
+  .introd .introd-contenido .introd-text3 {
+    font-size: 23px;
+    margin-top: 3.5px; }
+  /* FIN INTRO */
+  /* INICIO SECCIÓN PORTFOLIO */
+  #portfolio {
+    padding: 50px 0;
+    width: 100%; }
+  .portfolio-center .titulo {
+    font-size: 32px;
+    margin-bottom: 40px;
+    padding-bottom: 10px; }
+  .portfolio-center .titulo::before {
+    width: 120px;
+    height: 3px; }
+  .portfolio-img {
+    padding: 0px;
+    height: auto; }
+  /* FIN SECCIÓN PORTFOLIO */
+  /* INICIO PERSONAL */
+  .personal {
+    padding: 50px 0; }
+  .ancho {
+    max-width: 618px;
+    padding: 0 0px; }
+  .personal .titulo {
+    font-size: 32px;
+    margin-bottom: 40px;
+    padding-bottom: 10px; }
+  .personal .titulo::before {
+    width: 120px;
+    height: 3px; }
+  .personal .personal-contenido .columnaizq img {
+    height: 200px;
+    width: 200px;
+    border-radius: 7.5px; }
+  .personal .personal-contenido .columnader .textder {
+    font-size: 23px;
+    margin-bottom: 10px;
+    line-height: 20px; }
+  .personal .personal-contenido .columnader p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px; }
+  .personal .personal-contenido .columnader a {
+    font-size: 12px;
+    padding: 5px 15px;
+    margin-top: 2.5px;
+    border-radius: 4px; }
+  /* FIN PERSONAL */
+  /* INICIO FORMULARIO */
+  .contacto {
+    padding: 50px 0; }
+  .contacto .titulo {
+    font-size: 32px;
+    margin-bottom: 40px;
+    padding-bottom: 10px; }
+  .contacto .titulo::before {
+    width: 120px;
+    height: 3px; }
+  .contacto .contacto-contenido .columnaizq {
+    width: 100%; }
+  .contacto .contacto-contenido .columnader {
+    width: 100%;
+    margin-top: 20px; }
+  .contacto .contacto-contenido .textizq,
+  .contacto .contacto-contenido .textder {
+    font-size: 23px;
+    margin-bottom: 5px; }
+  .contacto .contacto-contenido .columnaizq p {
+    font-size: 12px; }
+  .contacto .contacto-contenido .columnaizq .icons {
+    margin: 2.5px 0;
+    font-size: 12px; }
+  .contacto .contacto-contenido .fila {
+    float: left;
+    height: 50px;
+    width: 50%; }
+  .contacto .contacto-contenido .fila .info {
+    margin-left: 10px; }
+  .contacto .contacto-contenido .fila i {
+    font-size: 12px; }
+  .contacto .contacto-contenido .fila .info .head {
+    line-height: 15px; }
+  .contacto .contacto-contenido .fila .info .subtitulo {
+    line-height: 15px; }
+  .contacto .columnader form .field,
+  .contacto .columnader form .fields .field {
+    height: 35px;
+    margin-bottom: 10px; }
+  .contacto .columnader form .name {
+    margin-right: 5px; }
+  .contacto .columnader form .email {
+    margin-left: 5px; }
+  .contacto .columnader form .field input {
+    border-radius: 7.5px;
+    padding: 0 10px;
+    font-size: 11px; }
+  .contacto .columnader form textarea {
+    border-radius: 7.5px;
+    padding: 0 10px;
+    font-size: 11px;
+    padding-top: 10px; }
+  .contacto .columnader form .textarea {
+    font-size: 11px; }
+  .contacto .columnader form .enviar {
+    height: 30px;
+    width: 120px;
+    margin-top: 50px; }
+  .contacto .columnader form .enviar button {
+    font-size: 11px;
+    padding: 5px 15px;
+    margin-top: 2.5px;
+    border-radius: 4px; }
+  /* FIN FORMULARIO */
+  /* INICIO FOOTER */
+  footer {
+    padding: 15px 18px; }
+  /* FIN FOOTER */ }
+
+@media screen and (max-width: 500px) {
+  /* INICIO NAV BAR */
+  header label {
+    display: block; }
+  label i {
+    color: #F5F5F5;
+    padding: 5px; }
+  .contenedor-header {
+    position: absolute;
+    max-width: 500px;
+    margin-left: -70%;
+    transition: all 0.5s; }
+  .contenedor-header ul {
+    flex-direction: column;
+    width: 100%; }
+  #header-menu {
+    padding: 5px; }
+  #header-menu .logo {
+    font-size: 22px; }
+  #header-menu a, li {
+    background-color: #45a29e;
+    padding: 5px 7.5px;
+    font-size: 12px; }
+  #menuhamburguesa:checked ~ .contenedor-header {
+    margin: 0; }
+  /* FIN NAV BAR */
+  /* INICIO INTRO */
+  .introd {
+    background-image: url("/img/profile500.png");
+    background-repeat: no-repeat;
+    height: 400px;
+    min-height: 200px; }
+  .introd .widthmax {
+    margin: 50px 0 auto 20px; }
+  .introd .introd-contenido .introd-text1 {
+    font-size: 12px; }
+  .introd .introd-contenido .introd-text2 {
+    font-size: 24px;
+    margin-top: 2px; }
+  .introd .introd-contenido .introd-text3 {
+    font-size: 17.25px;
+    margin-top: 2px; }
+  /* FIN INTRO */
+  /* INICIO SECCIÓN PORTFOLIO */
+  #portfolio {
+    padding: 35px 0;
+    width: 100%; }
+  .portfolio-center .titulo {
+    font-size: 24px;
+    margin-bottom: 30px;
+    padding-bottom: 7.5px; }
+  .portfolio-center .titulo::before {
+    width: 100px;
+    height: 2px; }
+  .portfolio-img {
+    padding: 0px;
+    height: auto; }
+  .portfolio-img a img {
+    float: left;
+    width: 100%;
+    padding: 0 20px 20px 20px; }
+  /* FIN SECCIÓN PORTFOLIO */
+  /* INICIO PERSONAL */
+  .personal {
+    padding: 35px 0; }
+  .ancho {
+    max-width: 370px;
+    padding: 0 0px; }
+  .personal .titulo {
+    font-size: 24px;
+    margin-bottom: 30px;
+    padding-bottom: 7.5px; }
+  .personal .titulo::before {
+    width: 100px;
+    height: 2px; }
+  .personal .personal-contenido .columnaizq {
+    float: left;
+    width: 100%; }
+  .personal .personal-contenido .columnaizq img {
+    display: block;
+    height: 150px;
+    width: 150px;
+    border-radius: 7.5px;
+    margin: auto; }
+  .personal .personal-contenido .columnader {
+    margin-top: 20px;
+    float: left;
+    width: 100%; }
+  .personal .personal-contenido .columnader .textder {
+    font-size: 17.25px;
+    margin-bottom: 10px;
+    line-height: 18px; }
+  .personal .personal-contenido .columnader p {
+    font-size: 10.5px;
+    line-height: 18px; }
+  .personal .personal-contenido .columnader a {
+    font-size: 10.5px;
+    padding: 5px 15px;
+    margin-top: 2.5px;
+    border-radius: 4px; }
+  /* FIN PERSONAL */
+  /* INICIO FORMULARIO */
+  .contacto {
+    padding: 35px 0; }
+  .contacto .titulo {
+    font-size: 24px;
+    margin-bottom: 30px;
+    padding-bottom: 7.5px; }
+  .contacto .titulo::before {
+    width: 100px;
+    height: 2px; }
+  .contacto .contacto-contenido .columnaizq {
+    width: 100%; }
+  .contacto .contacto-contenido .columnader {
+    width: 100%;
+    margin-top: 20px; }
+  .contacto .contacto-contenido .textizq,
+  .contacto .contacto-contenido .textder {
+    font-size: 17.25px;
+    margin-bottom: 5px; }
+  .contacto .contacto-contenido .columnaizq p {
+    font-size: 10.5px; }
+  .contacto .contacto-contenido .columnaizq .icons {
+    margin: 2.5px 0;
+    font-size: 10.5px; }
+  .contacto .contacto-contenido .fila {
+    float: left;
+    height: 50px;
+    width: 50%; }
+  .contacto .contacto-contenido .fila .info {
+    margin-left: 10px; }
+  .contacto .contacto-contenido .fila i {
+    font-size: 10.5px; }
+  .contacto .contacto-contenido .fila .info .head {
+    line-height: 15px; }
+  .contacto .contacto-contenido .fila .info .subtitulo {
+    line-height: 15px; }
+  .contacto .columnader form .field,
+  .contacto .columnader form .fields .field {
+    height: 35px;
+    margin-bottom: 10px; }
+  .contacto .columnader form .name {
+    margin-right: 5px; }
+  .contacto .columnader form .email {
+    margin-left: 5px; }
+  .contacto .columnader form .field input {
+    border-radius: 7.5px;
+    padding: 0 10px;
+    font-size: 9.5px; }
+  .contacto .columnader form textarea {
+    border-radius: 7.5px;
+    padding: 0 10px;
+    font-size: 9.5px;
+    padding-top: 10px; }
+  .contacto .columnader form .textarea {
+    font-size: 9.5px; }
+  .contacto .columnader form .enviar {
+    height: 30px;
+    width: 100px;
+    margin-top: 50px; }
+  .contacto .columnader form .enviar button {
+    font-size: 9.5px;
+    padding: 5px 15px;
+    margin-top: 2.5px;
+    border-radius: 4px; }
+  /* FIN FORMULARIO */
+  /* INICIO FOOTER */
+  footer {
+    padding: 15px 18px; }
+  /* FIN FOOTER */ }
