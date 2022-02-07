@@ -73,6 +73,37 @@ span {
   color: #45a29e; }
 
 /* FIN NAV BAR */
+/* INICIO INTRO */
+.introd {
+  display: flex;
+  background-color: #0b0c10;
+  background-image: url("/img/profile.png");
+  background-repeat: no-repeat;
+  height: 92vh;
+  color: #F5F5F5;
+  min-height: 500px; }
+
+.introd .widthmax {
+  margin: 250px 0 auto 330px; }
+
+.introd .introd-contenido .introd-text1 {
+  font-size: 20px; }
+
+.introd .introd-contenido .introd-text2 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: 10px; }
+
+.introd .introd-contenido .introd-text2 span {
+  color: #45a29e;
+  font-weight: 900; }
+
+.introd .introd-contenido .introd-text3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 10px; }
+
+/* FIN INTRO */
 /* INICIO PERSONAL */
 .ancho {
   max-width: 1300px;

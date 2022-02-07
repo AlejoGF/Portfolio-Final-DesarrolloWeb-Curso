@@ -1,7 +1,6 @@
 {
   "name": "proyectofinal",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "abbrev": "^1.1.1",
@@ -296,5 +295,14 @@
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejoGF/alejogf.finalportfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlejoGF/alejogf.finalportfolio/issues"
+  },
+  "homepage": "https://github.com/AlejoGF/alejogf.finalportfolio#readme",
+  "description": ""
 }

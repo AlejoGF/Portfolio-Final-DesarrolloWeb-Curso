@@ -100,8 +100,41 @@ span {
 
 /* INICIO INTRO */ 
 .introd {
+    display: flex;
     background-color: $fondo;
+    background-image: url("/img/profile.png");
+    background-repeat: no-repeat;
+    height: 92vh;
+    color: $blanco;
+    min-height: 500px;
 }
+
+.introd .widthmax {
+    margin: 250px 0 auto 330px;
+}
+
+.introd .introd-contenido .introd-text1 {
+    font-size: 20px;
+}
+
+.introd .introd-contenido .introd-text2 {
+    font-size: $titulos;
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+.introd .introd-contenido .introd-text2 span {
+    color: $terciario;
+    font-weight: 900;
+}
+
+.introd .introd-contenido .introd-text3 {
+    font-size: $subtitulos;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+
 /* FIN INTRO */
 
 /* INICIO PERSONAL */
